@@ -4,7 +4,7 @@ import java.util.List;
 import android.view.View.OnTouchListener;
 import com.badlogic.androidgames.framework.Input.TouchEvent;
 
-public interface TouchHandler extends OnTouchListenr {
+public interface TouchHandler extends OnTouchListener {
 
   public boolean isTouchDown(int pointer);
   public int getTouchX(int pointer);

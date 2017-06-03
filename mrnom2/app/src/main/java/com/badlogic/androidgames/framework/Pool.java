@@ -8,7 +8,7 @@ public class Pool<T> {
     public T createObject();
   }
 
-  private final List<T> freeObjects:
+  private final List<T> freeObjects;
   private final PoolObjectFactory<T> factory;
   private final int maxSize;
 
@@ -32,6 +32,6 @@ public class Pool<T> {
 
   public void free(T object) {
     if (freeObjects.size() < maxSize)
-      freeObjets.add(object);
+      freeObjects.add(object);
   }
 }

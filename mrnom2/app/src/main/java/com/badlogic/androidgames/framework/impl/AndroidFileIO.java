@@ -1,18 +1,18 @@
 package com.badlogic.androidgames.framework.impl;
 
 import java.io.File;
-import jva.io.FileInputStream;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import android.contet.res.AssetManager;
+import android.content.res.AssetManager;
 import android.os.Environment;
 
-import com.badlogic.androidgames.gramework.FileIO;
+import com.badlogic.androidgames.framework.FileIO;
 
-public class ANdroidFileIO implements FileIO {
+public class AndroidFileIO implements FileIO {
   AssetManger assets;
   String externalStroagePath;
 

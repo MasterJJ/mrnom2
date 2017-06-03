@@ -1,4 +1,4 @@
-package com.badlogic.androidgames.mrnom;
+package com.badlogic.mrnom;
 
 public class Stain {
   public static final int TYPE_1 = 0;

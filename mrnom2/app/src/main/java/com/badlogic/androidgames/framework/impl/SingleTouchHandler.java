@@ -3,35 +3,36 @@ package com.badlogic.androidgames.framework.imple;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.view.Motionevent;
+import android.view.MotionEvent;
 import android.view.View;
 
 import com.badlogic.androidgames.framework.Pool;
 import com.badlogic.androidgames.framework.Pool.PoolObjectFactory;
 import com.badlogic.androidgames.framework.Input.TouchEvent;
+import com.badlogic.androidgames.framework.impl.TouchHandler;
 
 public class SingleTouchHandler implements TouchHandler {
-  boolena isTouched;
+  boolean isTouched;
   int touchX;
   int touchY;
-  Pool <TouchEvengt> touchEventPool;
-  List <TouchEvent> touchevents = new Arraylist<TouchEvent>();
+  Pool <TouchEvent> touchEventPool;
+  List <TouchEvent> touchEvents = new ArrayList<TouchEvent>();
   List <TouchEvent> touchEventsBuffer = new ArrayList<TouchEvent>();
   float scaleX;
   float scaleY;
 
-  public clas SingleTouchHandler(View view, float scaleX, float scaleY) {
+  public class SingeTouchHandler(View view, float scalex, float scaley) {
     PoolObjectFactory<TouchEvent> factory = new PoolObjectFactory<TouchEvent>() {
-      @Ovoerride
+      @Override
       public TouchEvent createObject() {
-        return enw TouchEvent();
+        return new TouchEvent();
       }
     };
     touchEventPool = new Pool<TouchEvent>(factory, 100);
     view.setOnTouchListener(this);
 
-    this.scaleX = scaleX;
-    this.scaleY = scaleY;
+    this.scaleX = scalex;
+    this.scaleY = scaley;
 
   }
 
@@ -58,8 +59,8 @@ public class SingleTouchHandler implements TouchHandler {
       }
 
       touchEvent.x = touchX = (int)(event.getX() * scaleX);
-      touchEvent.y = touchy = (int)(event.getY() * scaleY);
-      touchEventsBufferadd(touchEvent);
+      touchEvent.y = touchY = (int)(event.getY() * scaleY);
+      touchEventsBuffer.add(touchEvent);
 
       return true;
 
@@ -77,13 +78,13 @@ public class SingleTouchHandler implements TouchHandler {
     }
   }
 
-
   @Override
-  public int geTouchX(int pointer) {
+  public int getTouchX(int pointer) {
     synchronized(this) {
       return touchX;
     }
   }
+
 
   @Override
   public int getTouchY(int pointer) {
@@ -100,7 +101,7 @@ public class SingleTouchHandler implements TouchHandler {
         touchEventPool.free(touchEvents.get(idx));
       touchEvents.clear();
       touchEvents.addAll(touchEventsBuffer);
-      toucheventsBuffer.clear();
+      touchEventsBuffer.clear();
       return touchEvents;
     }
   }

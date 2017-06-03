@@ -1,4 +1,4 @@
-package com.badlogic.androidgames.mrnom;
+package com.badlogic.mrnom;
 
 public class SnakePart {
   public int x, y;

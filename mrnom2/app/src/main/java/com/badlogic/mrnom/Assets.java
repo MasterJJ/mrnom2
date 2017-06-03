@@ -1,4 +1,4 @@
-package com.badlogic.androidgmaes.mrnom;
+package com.badlogic.mrnom;
 
 import com.badlogic.androidgames.gramework.Pixmap;
 import com.badlogic.androidgames.gramework.Sound;

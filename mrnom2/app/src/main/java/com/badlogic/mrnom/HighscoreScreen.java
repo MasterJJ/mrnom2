@@ -1,4 +1,4 @@
-package com.badlogic.androidgames.mrnom;
+package com.badlogic.mrnom;
 
 import java.util.List;
 
@@ -7,10 +7,10 @@ import com.badlogic.androidgames.framework.Graphics;
 import com.badlogic.androidgames.framework.Input.TouchEvent;
 import com.badlogic.androidgames.framework.Screen;
 
-public class HighscroeScreen extends Screen {
+public class HighscoreScreen extends Screen {
   String lines[] = new String[5];
 
-  public HighscreScreen(Game game) {
+  public HighscoreScreen(Game game) {
     super(game);
 
     for (int idx = 0; idx < 5; idx++) {

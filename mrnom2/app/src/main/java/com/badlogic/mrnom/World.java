@@ -1,4 +1,4 @@
-package com.badlogic.androidgames.mrnom;
+package com.badlogic.mrnom;
 
 import java.util.Random;
 

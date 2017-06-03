@@ -1,4 +1,4 @@
-package com.badlogic.androidgames.mrnom;
+package com.badlogic.mrnom;
 
 import com.badlogic.androidgames.gramework.Screen;
 import ocm.badlogic.androidgames.gramework.impl.AndroidGame;

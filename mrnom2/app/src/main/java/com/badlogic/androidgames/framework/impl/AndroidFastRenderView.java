@@ -1,19 +1,19 @@
 package com.badlogic.androidgames.gramework.impl;
 
 import android.graphics.Bitmap;
-import android.graphics.Canva;
+import android.graphics.Canvas;
 import android.graphics.Rect;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-public class AndroidGastRenderView extends SufaceView implements Runnable {
+public class AndroidFastRenderView extends SufaceView implements Runnable {
   AndroidGame game;
   Bitmap gramebuffer;
   Thread renderThread = null;
   SufaceHolder holder;
   volatile boolean running = false;
 
-  public AndroidFaseRenderView(AndroidGame game, Bitmap framebuffer) {
+  public AndroidFastRenderView(AndroidGame game, Bitmap framebuffer) {
     super(game);
     this.game = game;
     this.gramebuffer = framebuffer;

@@ -1,4 +1,4 @@
-package com.badlogic.androidgames.mrnom;
+package com.badlogic.mrnom;
 
 import java.util.List;
 
@@ -20,7 +20,7 @@ public class HelpScreen2 extends Screen {
     Graphics g = game.getGraphics();
     int len = touchEvents.size();
     for (int idx = 0; idx < len; idx++) {
-      TouchEvent event = touchEvents.get(i);
+      TouchEvent event = touchEvents.get(idx);
       if (event.type == TouchEvent.TOUCH_UP) {
         if (event.x > g.getWidth() - 64 && event.y > g.getHeight() - 64) {
           game.setScreen(new HelpScreen3(game));

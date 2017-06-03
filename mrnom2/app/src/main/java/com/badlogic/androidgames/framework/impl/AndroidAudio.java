@@ -1,4 +1,4 @@
-package com.badlogic.androidgames.gramework.impl;
+package com.badlogic.androidgames.framework.impl;
 
 import java.io.IOException;
 
@@ -8,9 +8,9 @@ import android.content.res.AssetManager;
 import android.media.AudioManager;
 import android.media.SoundPool;
 
-import com.badlogic.androidgames.gramework.Audio;
-import com.badlogic.androidgames.gramework.Music;
-import com.badlogic.androidgames.gramework.Sound;
+import com.badlogic.androidgames.framework.Audio;
+import com.badlogic.androidgames.framework.Music;
+import com.badlogic.androidgames.framework.Sound;
 
 public class AndroidAudio implements Audio {
   AssetManager assets;
@@ -43,7 +43,7 @@ public class AndroidAudio implements Audio {
       return new AndroidSound(soundPool, soundId);
     } catch (IOException e) {
 
-      throw new Runtimeexception("Couldn't load sound '" + filename + "'");
+      throw new RuntimeException("Couldn't load sound '" + filename + "'");
     }
   }
 }
